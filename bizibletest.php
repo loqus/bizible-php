@@ -18,9 +18,9 @@ $docname="Document title"; //set a title
 $urlforpayload="https://www.putyoururlhere.com"; //put url here
 $screenDimensions = "1680x1050"; //fake it
 $screenHash = hashFunction($screenDimensions);
-$sequence = $_COOKIE["_biz_nA"]+1;
+$sequence = intval($_COOKIE["_biz_nA"])+1;
 setcookie("_biz_nA", $sequence, time()+ 365 * 24 * 60 * 60); //set sequence cookie one number ahead
-$uid = $_COOKIE["_biz_uid"];
+$uid = filter_var($_COOKIE["_biz_uid"], FILTER_SANITIZE_STRING);
 $rnd = mt_rand(0, 999999);
 $microtime = intval(microtime(true) * 1000);
 $payload = array(
