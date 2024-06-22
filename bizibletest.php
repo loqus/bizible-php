@@ -14,7 +14,7 @@ function hashFunction($e, $g = 0) {
 }
 
 if(isset($_COOKIE["_biz_nA"]) && isset($_COOKIE["_biz_uid"])){
-$title="Document title"; //set a title
+$docname="Document title"; //set a title
 $urlforpayload="https://www.putyoururlhere.com"; //put url here
 $screenDimensions = "1680x1050"; //fake it
 $screenHash = hashFunction($screenDimensions);
